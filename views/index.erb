@@ -1,0 +1,29 @@
+<% require 'pry' %>
+<html>
+  <body>
+    <h1><%= @name %></h1>
+
+      <h2>Ingredients</h2><br>
+        <ul>
+          <% @ingredients.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+        </ul><br>
+
+      <h2>Directions</h2><br>
+        <ol>
+          <% @directions.each do |direction| %>
+            <li><%= direction %></li>
+          <% end %>
+        </ol><br>
+
+      <h2>Reviews:</h2><br>
+        <ul>
+          <% @reviews.each do |review| %>
+            <li><%= review[:username] %><br>Rating: <%= review[:rating] %><br>Rating: <%= review[:review] %></li><br>
+          <% end %>
+        </ul>
+
+  </body>
+
+</html>
